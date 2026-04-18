@@ -1,0 +1,21 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION      = "20"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+# Netlify's official Next.js runtime — serves pages, /api/* routes,
+# image optimisation, and edge functions transparently.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Sensible default security headers.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+    Permissions-Policy     = "geolocation=(), microphone=(), camera=()"
+    X-Frame-Options        = "DENY"

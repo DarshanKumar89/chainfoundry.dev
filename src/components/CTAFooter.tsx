@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { DOCS_URL } from "@/lib/links";
 
 export default function CTAFooter() {
   return (
@@ -18,7 +19,7 @@ export default function CTAFooter() {
             eyebrow="Developer"
             title="Get started"
             body="Read the docs, install the SDK, decode your first event in 5 minutes."
-            href="https://docs.chainfoundry.dev"
+            href={DOCS_URL}
             cta="Read the docs"
           />
           <Path

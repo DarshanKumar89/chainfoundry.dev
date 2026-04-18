@@ -4,6 +4,7 @@ import { ArrowRight, Calendar, Mail, MessageCircle } from "lucide-react";
 import NewsletterForm from "@/components/NewsletterForm";
 import PageHero from "@/components/PageHero";
 import { GithubIcon, LinkedinIcon, XIcon } from "@/components/SocialIcons";
+import { DOCS_URL, GITHUB_URL } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "Contact — Book a Call or Get in Touch",
@@ -30,7 +31,7 @@ export default function Contact() {
               title="I'm a developer"
               body="Get started with ChainFoundry in 5 minutes."
               cta="Read the docs"
-              href="https://docs.chainfoundry.dev"
+              href={DOCS_URL}
             />
             <Path
               eyebrow="Partner"
@@ -93,7 +94,7 @@ export default function Contact() {
                 icon={<GithubIcon />}
                 label="GitHub"
                 value="DarshanKumar89/chainkit"
-                href="https://github.com/DarshanKumar89/chainkit"
+                href={GITHUB_URL}
               />
               <Contactile
                 icon={<Calendar className="h-4 w-4" />}

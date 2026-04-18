@@ -1,0 +1,62 @@
+# ChainFoundry
+
+> The universal blockchain data toolkit. One API for 7 blockchain architectures and 500+ networks. Four shipped Rust crates (chaincodec, chainrpc, chainindex, chainerrors) with native bindings for TypeScript, Python, Go, Java, and WASM. MIT licensed. Built by AI2Innovate SRL in Bratislava and Brussels.
+
+ChainFoundry is the missing standard library for building anything that reads, decodes, indexes, or correlates blockchain data. It replaces a wall of chain-specific SDKs (Alloy, viem, anchor-client, cosmjs, cosmrs, @solana/web3.js, @mysten/sui.js, etc.) with one coherent API surface that works across every major architecture: EVM, Solana (SVM), Cosmos, Substrate, Bitcoin, Aptos, and Sui.
+
+The project is aimed at four primary audiences: AI-agent builders who need decoded on-chain data via MCP; multichain dApp teams (wallets, DEX aggregators, portfolio trackers, bridge UIs); compliance and forensics teams needing open-source alternatives to Chainalysis; and blockchain L1/L2 ecosystems looking for better developer tooling on their chain.
+
+## Facts
+
+- Shipped crates (on crates.io, npm, PyPI): chaincodec v0.1.2, chainrpc v0.1.1, chainindex v0.1.1, chainerrors v0.1.0
+- Planned v2 crate: chaincorrelate (cross-chain event correlation)
+- Architectures with full chainrpc + chainindex support: EVM, Solana, Cosmos, Substrate, Bitcoin, Aptos, Sui
+- chaincodec decoder support today: EVM, Solana, Cosmos (Substrate, Bitcoin, Aptos, Sui planned)
+- chainerrors coverage: EVM (Solidity reverts, panics, custom errors) + Solana (program failures)
+- License: MIT
+- Founder: Darsh Kumar (Apache Committer, 25+ years of senior engineering)
+- Operating entity: AI2Innovate SRL (Belgium)
+- Source repository: https://github.com/DarshanKumar89/chainkit
+
+## Products / crates
+
+- [chaincodec](https://github.com/DarshanKumar89/chainkit/tree/main/chaincodec) — Universal ABI decoder. 50+ bundled protocol schemas (Uniswap V2/V3, Aave V3, Compound, Lido, EigenLayer, Chainlink, Seaport, Wormhole, etc.). EVM events + calls, Solana Anchor IDL, Cosmos Protobuf. Parallel batch decode with Rayon. CSDL portable schema format.
+- [chainrpc](https://github.com/DarshanKumar89/chainkit/tree/main/chainrpc) — Production RPC transport for all 7 architectures. Circuit breaker, 4-tier response cache, CU-aware rate limiter, MEV protection, 5 failover strategies, request dedup, auto-batching, Prometheus metrics.
+- [chainindex](https://github.com/DarshanKumar89/chainkit/tree/main/chainindex) — Reorg-safe blockchain indexer as a library (not a SaaS). Pluggable storage: SQLite, Postgres, RocksDB. Embedded in your binary. Supports all 7 architectures including Sui checkpoint-native indexing.
+- [chainerrors](https://github.com/DarshanKumar89/chainkit/tree/main/chainerrors) — Decodes Solidity reverts, panics, custom errors, and Solana program failures from raw bytes. Turns 0x08c379a0... into "Insufficient balance".
+
+## Site map
+
+- [Home — Decode once. Build everywhere.](https://chainfoundry.dev/)
+- [About — why we built ChainFoundry + founder origin story](https://chainfoundry.dev/about/)
+- [MCP server — blockchain data for AI agents (coming soon)](https://chainfoundry.dev/mcp/)
+- [Use cases hub](https://chainfoundry.dev/use-cases/)
+- [Contact](https://chainfoundry.dev/contact/)
+- [Blog](https://chainfoundry.dev/blog/)
+- [Press & brand kit](https://chainfoundry.dev/press/)
+
+## Use cases
+
+- [AI agents — MCP server for multichain data](https://chainfoundry.dev/use-cases/ai-agents/)
+- [Compliance & forensics — open-source cross-chain tracing](https://chainfoundry.dev/use-cases/compliance/)
+- [Multichain dApps — add any chain in hours](https://chainfoundry.dev/use-cases/multichain-dapps/)
+- [Blockchain ecosystems — better tooling for your L1/L2](https://chainfoundry.dev/use-cases/ecosystem-growth/)
+- [Startups & SMEs — ship multichain without a team of 10](https://chainfoundry.dev/use-cases/startups/)
+- [Migration — from Alloy, viem, ethers.js, or The Graph](https://chainfoundry.dev/use-cases/competitive-migration/)
+
+## Blog posts (published)
+
+- [L1 and L2 — the multichain data problem you thought you'd already solved](https://chainfoundry.dev/blog/l1-vs-l2-multichain-data/) — Why "same EVM" is not the same data. Finality, reorg depth, sequencer outages across Ethereum + Base + Arbitrum + Optimism + zkSync.
+- [The Sui ecosystem playbook — why Move teams need multichain from day one](https://chainfoundry.dev/blog/sui-ecosystem-playbook/) — Object-model decoding, checkpoint pagination, dynamic fields, and the 20-line Sui migration.
+- [Sui gets instant distribution to every multichain team](https://chainfoundry.dev/blog/sui-instant-distribution-btcfi/) — Thesis for the Sui Foundation + BTCFi on Sui value chain, including a concrete Bitcoin ↔ Sui correlation example.
+
+## Contact
+
+- Email: info@ai2innovate.io
+- GitHub: https://github.com/DarshanKumar89/chainkit
+- X/Twitter: https://x.com/darshan_aqua
+- LinkedIn (company): https://www.linkedin.com/company/ai2innovate/
+
+## For partners and investors
+
+ChainFoundry is actively fundraising and open to ecosystem-grant partnerships with blockchain Layer-1 and Layer-2 foundations (notably Sui, Aptos, Cosmos, Polkadot, Bitcoin BTCFi ecosystem teams). Grant range: $20K–$100K for deep chain-specific work. Partnership and investment enquiries: info@ai2innovate.io.

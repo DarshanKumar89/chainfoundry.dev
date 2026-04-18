@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, BookOpen } from "lucide-react";
 import TypingCode from "../TypingCode";
+import { DOCS_URL, GITHUB_URL } from "@/lib/links";
 
 const heroCode = `use chaincodec::EvmDecoder;
 use chainrpc::ChainClient;
@@ -74,7 +75,7 @@ export default function Hero() {
             </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a href="https://docs.chainfoundry.dev" className="btn-primary">
+              <a href={DOCS_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Get started
                 <ArrowRight className="h-4 w-4" />
               </a>
@@ -82,7 +83,9 @@ export default function Hero() {
                 Book a call
               </Link>
               <a
-                href="https://github.com/DarshanKumar89/chainkit"
+                href={GITHUB_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-ghost ml-1"
               >
                 <BookOpen className="h-4 w-4" />

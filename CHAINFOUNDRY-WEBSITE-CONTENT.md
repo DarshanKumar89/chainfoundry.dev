@@ -64,7 +64,7 @@ SVG logo spec:
 
 - GitHub: https://github.com/DarshanKumar89/chainkit (do NOT show star count)
 - X/Twitter: https://x.com/darshan_aqua
-- LinkedIn: https://www.linkedin.com/in/darshankumar/
+- LinkedIn: https://www.linkedin.com/company/ai2innovate/
 - Discord: darshankumar89
 
 ---
@@ -765,7 +765,7 @@ Founder & CEO
 
 Previously built enterprise systems across Oracle, DB2, PostgreSQL, and led cybersecurity architecture for EU institutions. On-chain since 2017, with deep experience across DeFi protocols.
 
-LinkedIn: https://www.linkedin.com/in/darshankumar/
+LinkedIn: https://www.linkedin.com/company/ai2innovate/
 X: https://x.com/darshan_aqua
 Discord: darshankumar89
 
@@ -795,7 +795,7 @@ Subscribe to our newsletter → [email capture form]
 ### Direct contact
 - Email: info@ai2innovate.io
 - X: @darshan_aqua
-- LinkedIn: /in/darshankumar/
+- LinkedIn: ai2innovate
 - Discord: darshankumar89
 - GitHub: DarshanKumar89/chainkit
 
@@ -818,7 +818,7 @@ Subscribe to our newsletter → [email capture form]
   "author": {
     "@type": "Person",
     "name": "Darsh Kumar",
-    "url": "https://www.linkedin.com/in/darshankumar/"
+    "url": "https://www.linkedin.com/company/ai2innovate/"
   },
   "sourceOrganization": {
     "@type": "Organization",

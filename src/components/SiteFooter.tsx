@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { LogoMark } from "./Logo";
 import { DiscordIcon, GithubIcon, LinkedinIcon, XIcon } from "./SocialIcons";
+import { DOCS_URL } from "@/lib/links";
 
 const product = [
   { href: "/use-cases", label: "Use cases" },
   { href: "/mcp", label: "MCP server" },
-  { href: "https://docs.chainfoundry.dev", label: "Documentation" },
+  { href: DOCS_URL, label: "Documentation" },
   { href: "https://github.com/DarshanKumar89/chainkit", label: "GitHub" },
 ];
 

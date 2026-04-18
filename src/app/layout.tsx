@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { DM_Sans, Instrument_Serif } from "next/font/google";
-import Script from "next/script";
+import JsonLd from "@/components/JsonLd";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { organization, softwareApplication, webSite } from "@/lib/seo";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s — ChainFoundry",
   },
   description:
-    "Decode, transport, index, and correlate blockchain data across 7 architectures and 500+ networks. One Rust core, 6 language bindings. MIT licensed.",
+    "Decode, transport, index, and correlate blockchain data across 7 architectures and 500+ networks. 4 shipped Rust crates, 5 language bindings, MIT licensed. Used by AI-agent, DeFi, compliance, and Sui/Bitcoin BTCFi teams.",
   keywords: [
     "multichain blockchain data toolkit",
     "blockchain ABI decoder Rust",
@@ -37,57 +38,55 @@ export const metadata: Metadata = {
     "MCP server blockchain AI agents",
     "blockchain data infrastructure",
     "universal ABI decoder",
+    "Sui multichain indexer",
+    "BTCFi data toolkit",
+    "Chainalysis open source alternative",
+    "EU blockchain infrastructure MiCA NIS2",
   ],
   authors: [{ name: "Darsh Kumar", url: "https://www.linkedin.com/in/darshankumar/" }],
   creator: "Darsh Kumar",
   publisher: "AI2Innovate SRL",
-  alternates: { canonical: "/" },
+  category: "Developer Tools · Blockchain Infrastructure",
+  alternates: {
+    canonical: "/",
+    types: {
+      "application/rss+xml": [{ url: "/rss.xml", title: "ChainFoundry blog" }],
+    },
+  },
   openGraph: {
     type: "website",
     url: "https://chainfoundry.dev",
     siteName: "ChainFoundry",
     title: "ChainFoundry — The Universal Blockchain Data Toolkit",
     description:
-      "Decode, transport, index, and correlate blockchain data across 7 architectures and 500+ networks. MIT licensed.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "ChainFoundry" }],
+      "Decode, transport, index, and correlate blockchain data across 7 architectures and 500+ networks. 4 shipped Rust crates. MIT licensed.",
+    locale: "en_US",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "ChainFoundry — universal blockchain data toolkit" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@darshan_aqua",
     creator: "@darshan_aqua",
     title: "ChainFoundry — The Universal Blockchain Data Toolkit",
-    description: "7 architectures. 500+ networks. 6 languages. One API.",
-    images: ["/og-image.png"],
+    description: "7 architectures. 500+ networks. 5 languages. One API.",
+    images: ["/opengraph-image"],
   },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
-};
-
-const appJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: "ChainFoundry",
-  applicationCategory: "DeveloperApplication",
-  operatingSystem: "Cross-platform",
-  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-  author: {
-    "@type": "Person",
-    name: "Darsh Kumar",
-    url: "https://www.linkedin.com/in/darshankumar/",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
   },
-  sourceOrganization: {
-    "@type": "Organization",
-    name: "AI2Innovate SRL",
-    url: "https://ai2innovate.io",
-  },
-  description:
-    "The universal blockchain data toolkit. Decode, transport, index, and correlate blockchain data across 7 architectures and 500+ networks.",
-  url: "https://chainfoundry.dev",
-  codeRepository: "https://github.com/DarshanKumar89/chainkit",
-  license: "https://opensource.org/licenses/MIT",
-  programmingLanguage: ["Rust", "TypeScript", "Python", "Go", "Java"],
 };
 
 export default function RootLayout({
@@ -95,16 +94,20 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${dmSans.variable} ${instrumentSerif.variable}`}>
+      <head>
+        <link rel="alternate" type="application/rss+xml" title="ChainFoundry blog" href="/rss.xml" />
+      </head>
       <body className="font-sans antialiased">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:bg-ink focus:px-3 focus:py-2 focus:text-sm focus:text-white"
+        >
+          Skip to content
+        </a>
         <SiteHeader />
-        <main>{children}</main>
+        <main id="main">{children}</main>
         <SiteFooter />
-        <Script
-          id="ld-json-app"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }}
-        />
+        <JsonLd data={[organization, softwareApplication, webSite()]} />
       </body>
     </html>
   );

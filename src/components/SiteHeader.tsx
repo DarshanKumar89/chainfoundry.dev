@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
+import { DOCS_URL } from "@/lib/links";
 
 const nav = [
   { href: "/use-cases", label: "Use cases" },
@@ -47,7 +48,9 @@ export default function SiteHeader() {
         </nav>
         <div className="hidden items-center gap-3 md:flex">
           <a
-            href="https://docs.chainfoundry.dev"
+            href={DOCS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm text-ink/70 transition hover:text-ink"
           >
             Docs
@@ -79,7 +82,9 @@ export default function SiteHeader() {
               </Link>
             ))}
             <a
-              href="https://docs.chainfoundry.dev"
+              href={DOCS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
               className="rounded-lg px-3 py-2 text-base text-ink/80 hover:bg-mist-50"
             >
               Docs

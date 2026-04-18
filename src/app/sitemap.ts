@@ -5,7 +5,7 @@ import { useCases } from "@/content/useCases";
 const base = "https://chainfoundry.dev";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["/", "/use-cases", "/mcp", "/blog", "/about", "/contact"];
+  const staticRoutes = ["/", "/use-cases", "/mcp", "/blog", "/about", "/contact", "/press"];
   const now = new Date();
 
   return [
