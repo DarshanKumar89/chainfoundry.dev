@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Instrument_Serif } from "next/font/google";
+import Analytics from "@/components/Analytics";
 import JsonLd from "@/components/JsonLd";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
@@ -108,6 +109,7 @@ export default function RootLayout({
         <main id="main">{children}</main>
         <SiteFooter />
         <JsonLd data={[organization, softwareApplication, webSite()]} />
+        <Analytics />
       </body>
     </html>
   );
