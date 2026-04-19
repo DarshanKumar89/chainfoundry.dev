@@ -7,7 +7,7 @@ const product = [
   { href: "/use-cases", label: "Use cases" },
   { href: "/mcp", label: "MCP server" },
   { href: DOCS_URL, label: "Documentation" },
-  { href: "https://github.com/DarshanKumar89/chainkit", label: "GitHub" },
+  { href: "https://github.com/DarshanKumar89/chainfoundry", label: "GitHub" },
 ];
 
 const company = [
@@ -39,7 +39,7 @@ export default function SiteFooter() {
               The universal blockchain data toolkit. 7 architectures. 500+ networks. 6 languages. One API.
             </p>
             <div className="mt-6 flex items-center gap-3">
-              <SocialLink href="https://github.com/DarshanKumar89/chainkit" label="GitHub">
+              <SocialLink href="https://github.com/DarshanKumar89/chainfoundry" label="GitHub">
                 <GithubIcon />
               </SocialLink>
               <SocialLink href="https://x.com/darshan_aqua" label="X / Twitter">
@@ -60,9 +60,28 @@ export default function SiteFooter() {
 
         <div className="mt-14 flex flex-col items-start gap-3 border-t border-white/10 pt-8 text-xs text-white/50 md:flex-row md:items-center md:justify-between">
           <p>
-            ChainFoundry is a product of AI2Innovate SRL. EU-based: Bratislava, Slovakia · Brussels, Belgium.
+            ChainFoundry is a product of{" "}
+            <a
+              href="https://ai2innovate.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/70 underline decoration-white/20 underline-offset-4 transition hover:text-white hover:decoration-white"
+            >
+              AI2Innovate
+            </a>
+            .
           </p>
-          <p>MIT Licensed · © 2026 AI2Innovate SRL</p>
+          <p>
+            © 2026{" "}
+            <a
+              href="https://ai2innovate.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/70 underline decoration-white/20 underline-offset-4 transition hover:text-white hover:decoration-white"
+            >
+              AI2Innovate
+            </a>
+          </p>
         </div>
       </div>
     </footer>

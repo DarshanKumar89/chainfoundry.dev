@@ -66,7 +66,7 @@ export default function Page() {
         <p>
           EU and US crypto regulation is moving fast. Any chain that wants regulated institutional volume
           needs forensics tooling that treats it as a first-class citizen, not a footnote. ChainFoundry is
-          being built EU-first, MIT-licensed, with cross-chain correlation on the roadmap. When a European
+          being built EU-first, open-source, with cross-chain correlation on the roadmap. When a European
           exchange needs to trace a Bitcoin inflow through a bridge to a Sui position to satisfy MiCA
           reporting, we want that to be boring — and we want it to work natively for Sui from day one.
         </p>

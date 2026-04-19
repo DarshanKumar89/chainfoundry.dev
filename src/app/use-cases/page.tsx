@@ -15,7 +15,7 @@ const outcomes = [
   { label: "chains added in", value: "hours", body: "not weeks of per-chain integration" },
   { label: "SaaS bill reduced by", value: "10×", body: "vs. Chainalysis / Moralis / Alchemy" },
   { label: "languages supported", value: "6", body: "Rust, TS, Python, Go, Java, WASM" },
-  { label: "lock-in", value: "none", body: "MIT-licensed, self-hosted, embeddable" },
+  { label: "lock-in", value: "none", body: "open-source, self-hosted, embeddable" },
 ];
 
 export default function UseCasesHub() {

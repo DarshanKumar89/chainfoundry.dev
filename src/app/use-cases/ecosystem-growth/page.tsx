@@ -54,7 +54,7 @@ const blocks: UseCaseBlock[] = [
       "Your chain's indexer with reorg-safe storage and checkpoint resume",
       "Your chain's event decoder with chain-specific awareness (Sui object types, Cosmos IBC messages, Substrate pallets)",
       "All accessible in Rust, TypeScript, Python, Go, Java, and WASM",
-      "All open-source under the MIT license",
+      "All open-source",
     ],
   },
   { type: "h2", text: "What an ecosystem partnership looks like" },

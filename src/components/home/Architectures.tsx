@@ -152,10 +152,10 @@ export default function Architectures() {
           <span className="ml-auto">
             Source of truth:{" "}
             <a
-              href="https://github.com/DarshanKumar89/chainkit"
+              href="https://github.com/DarshanKumar89/chainfoundry"
               className="link-underline"
             >
-              github.com/DarshanKumar89/chainkit
+              github.com/DarshanKumar89/chainfoundry
             </a>
           </span>
         </div>

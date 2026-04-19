@@ -2,7 +2,7 @@
 // rich results and LLM grounding. Use via <JsonLd data={...} /> in a page.
 
 const SITE = "https://chainfoundry.dev";
-const GITHUB = "https://github.com/DarshanKumar89/chainkit";
+const GITHUB = "https://github.com/DarshanKumar89/chainfoundry";
 
 export const organization = {
   "@context": "https://schema.org",
@@ -25,18 +25,11 @@ export const organization = {
       "https://github.com/DarshanKumar89",
     ],
   },
-  address: [
-    {
-      "@type": "PostalAddress",
-      addressLocality: "Bratislava",
-      addressCountry: "SK",
-    },
-    {
-      "@type": "PostalAddress",
-      addressLocality: "Brussels",
-      addressCountry: "BE",
-    },
-  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Brussels",
+    addressCountry: "BE",
+  },
   sameAs: [
     GITHUB,
     "https://x.com/darshan_aqua",
@@ -64,12 +57,11 @@ export const softwareApplication = {
   operatingSystem: "Cross-platform",
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   author: { "@type": "Person", name: "Darsh Kumar" },
-  sourceOrganization: { "@type": "Organization", name: "AI2Innovate SRL", url: "https://ai2innovate.io" },
+  sourceOrganization: { "@type": "Organization", name: "AI2Innovate", url: "https://ai2innovate.io" },
   description:
     "The universal blockchain data toolkit. Decode, transport, index, and correlate blockchain data across 7 architectures and 500+ networks.",
   url: SITE,
   codeRepository: GITHUB,
-  license: "https://opensource.org/licenses/MIT",
   programmingLanguage: ["Rust", "TypeScript", "Python", "Go", "Java"],
   keywords:
     "multichain, blockchain, ABI decoder, RPC middleware, indexer, MCP, AI agents, cross-chain, EVM, Solana, Cosmos, Sui, Bitcoin, compliance, open-source",

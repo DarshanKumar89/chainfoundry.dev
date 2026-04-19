@@ -12,15 +12,15 @@ export default function OpenSource() {
         <div className="reveal mx-auto max-w-3xl text-center">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-accent">Open source</p>
           <h2 className="mt-3 font-serif text-3xl leading-tight md:text-5xl">
-            MIT licensed. Built in the open.
+            Built in the open.
           </h2>
           <p className="mt-6 text-lg text-white/70 md:text-xl md:leading-relaxed">
-            ChainFoundry&apos;s core SDK is fully open-source under the MIT license. 197 features are free forever.
-            Enterprise cloud and managed services are coming for teams that need hosted infrastructure.
+            ChainFoundry&apos;s core SDK is fully open-source. 197 features are free forever. Enterprise cloud
+            and managed services are coming for teams that need hosted infrastructure.
           </p>
           <div className="mt-8 flex items-center justify-center">
             <a
-              href="https://github.com/DarshanKumar89/chainkit"
+              href="https://github.com/DarshanKumar89/chainfoundry"
               className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-ink transition hover:bg-mist-100"
             >
               <GithubIcon />

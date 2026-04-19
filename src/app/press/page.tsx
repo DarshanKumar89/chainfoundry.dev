@@ -23,23 +23,22 @@ export const metadata: Metadata = {
 
 const facts: [string, string][] = [
   ["Product", "ChainFoundry — the universal blockchain data toolkit"],
-  ["Operating entity", "AI2Innovate SRL (Belgium)"],
+  ["Operating entity", "AI2Innovate"],
   ["Founded", "2026"],
   ["Headquarters", "Brussels, Belgium"],
-  ["License", "MIT (open-source core)"],
   ["Shipped crates", "chaincodec v0.1.2 · chainrpc v0.1.1 · chainindex v0.1.1 · chainerrors v0.1.0"],
   ["Architectures covered", "EVM · Solana · Cosmos · Substrate · Bitcoin · Aptos · Sui"],
   ["Networks", "500+ (EVM alone covers 200+)"],
   ["Language bindings", "Rust · TypeScript · Python · Go · Java · WASM"],
-  ["Repository", "github.com/DarshanKumar89/chainkit"],
+  ["Repository", "github.com/DarshanKumar89/chainfoundry"],
   ["Media contact", "info@ai2innovate.io"],
 ];
 
 const boilerplateShort =
-  "ChainFoundry is the universal blockchain data toolkit. Built in Rust, it gives teams one API for reading, decoding, indexing, and correlating blockchain data across 7 architectures and 500+ networks. MIT-licensed, EU-built, used by AI-agent, DeFi, and compliance teams.";
+  "ChainFoundry is the universal blockchain data toolkit. Built in Rust, it gives teams one API for reading, decoding, indexing, and correlating blockchain data across 7 architectures and 500+ networks. Open-source core, used by AI-agent, DeFi, and compliance teams.";
 
 const boilerplateLong =
-  "ChainFoundry is the universal blockchain data toolkit — a suite of four shipped Rust crates (chaincodec, chainrpc, chainindex, chainerrors) with native bindings for TypeScript, Python, Go, Java, and WASM. It replaces a wall of chain-specific SDKs with one coherent API that works across EVM, Solana, Cosmos, Substrate, Bitcoin, Aptos, and Sui. The project is MIT-licensed and self-hostable, aimed at multichain dApp teams, AI-agent builders (via its in-development MCP server), compliance and forensics teams, and blockchain L1/L2 ecosystems that want better developer tooling. ChainFoundry is built by AI2Innovate SRL, headquartered in Brussels.";
+  "ChainFoundry is the universal blockchain data toolkit — a suite of four shipped Rust crates (chaincodec, chainrpc, chainindex, chainerrors) with native bindings for TypeScript, Python, Go, Java, and WASM. It replaces a wall of chain-specific SDKs with one coherent API that works across EVM, Solana, Cosmos, Substrate, Bitcoin, Aptos, and Sui. The project is open-source and self-hostable, aimed at multichain dApp teams, AI-agent builders (via its in-development MCP server), compliance and forensics teams, and blockchain L1/L2 ecosystems that want better developer tooling. ChainFoundry is built by AI2Innovate SRL, headquartered in Brussels.";
 
 const founderQuote =
   "Blockchain data infrastructure should be open, embeddable, and work across every chain — not locked behind SaaS subscriptions or limited to one ecosystem. ChainFoundry is the missing standard library for the next decade of multichain software.";

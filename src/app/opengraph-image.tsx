@@ -41,7 +41,7 @@ export default async function OGImage() {
 
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 22, color: "#8B96A8" }}>
           <div>chainfoundry.dev</div>
-          <div>MIT · built in Bratislava &amp; Brussels</div>
+          <div>built in Brussels</div>
         </div>
       </div>
     ),

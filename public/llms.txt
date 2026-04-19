@@ -1,6 +1,6 @@
 # ChainFoundry
 
-> The universal blockchain data toolkit. One API for 7 blockchain architectures and 500+ networks. Four shipped Rust crates (chaincodec, chainrpc, chainindex, chainerrors) with native bindings for TypeScript, Python, Go, Java, and WASM. MIT licensed. Built by AI2Innovate SRL in Bratislava and Brussels.
+> The universal blockchain data toolkit. One API for 7 blockchain architectures and 500+ networks. Four shipped Rust crates (chaincodec, chainrpc, chainindex, chainerrors) with native bindings for TypeScript, Python, Go, Java, and WASM. Open-source core. Built by AI2Innovate SRL in Brussels.
 
 ChainFoundry is the missing standard library for building anything that reads, decodes, indexes, or correlates blockchain data. It replaces a wall of chain-specific SDKs (Alloy, viem, anchor-client, cosmjs, cosmrs, @solana/web3.js, @mysten/sui.js, etc.) with one coherent API surface that works across every major architecture: EVM, Solana (SVM), Cosmos, Substrate, Bitcoin, Aptos, and Sui.
 
@@ -13,17 +13,17 @@ The project is aimed at four primary audiences: AI-agent builders who need decod
 - Architectures with full chainrpc + chainindex support: EVM, Solana, Cosmos, Substrate, Bitcoin, Aptos, Sui
 - chaincodec decoder support today: EVM, Solana, Cosmos (Substrate, Bitcoin, Aptos, Sui planned)
 - chainerrors coverage: EVM (Solidity reverts, panics, custom errors) + Solana (program failures)
-- License: MIT
+- Distribution: open-source core
 - Founder: Darsh Kumar (Apache Committer, 25+ years of senior engineering)
 - Operating entity: AI2Innovate SRL (Belgium)
-- Source repository: https://github.com/DarshanKumar89/chainkit
+- Source repository: https://github.com/DarshanKumar89/chainfoundry
 
 ## Products / crates
 
-- [chaincodec](https://github.com/DarshanKumar89/chainkit/tree/main/chaincodec) — Universal ABI decoder. 50+ bundled protocol schemas (Uniswap V2/V3, Aave V3, Compound, Lido, EigenLayer, Chainlink, Seaport, Wormhole, etc.). EVM events + calls, Solana Anchor IDL, Cosmos Protobuf. Parallel batch decode with Rayon. CSDL portable schema format.
-- [chainrpc](https://github.com/DarshanKumar89/chainkit/tree/main/chainrpc) — Production RPC transport for all 7 architectures. Circuit breaker, 4-tier response cache, CU-aware rate limiter, MEV protection, 5 failover strategies, request dedup, auto-batching, Prometheus metrics.
-- [chainindex](https://github.com/DarshanKumar89/chainkit/tree/main/chainindex) — Reorg-safe blockchain indexer as a library (not a SaaS). Pluggable storage: SQLite, Postgres, RocksDB. Embedded in your binary. Supports all 7 architectures including Sui checkpoint-native indexing.
-- [chainerrors](https://github.com/DarshanKumar89/chainkit/tree/main/chainerrors) — Decodes Solidity reverts, panics, custom errors, and Solana program failures from raw bytes. Turns 0x08c379a0... into "Insufficient balance".
+- [chaincodec](https://github.com/DarshanKumar89/chainfoundry/tree/main/chaincodec) — Universal ABI decoder. 50+ bundled protocol schemas (Uniswap V2/V3, Aave V3, Compound, Lido, EigenLayer, Chainlink, Seaport, Wormhole, etc.). EVM events + calls, Solana Anchor IDL, Cosmos Protobuf. Parallel batch decode with Rayon. CSDL portable schema format.
+- [chainrpc](https://github.com/DarshanKumar89/chainfoundry/tree/main/chainrpc) — Production RPC transport for all 7 architectures. Circuit breaker, 4-tier response cache, CU-aware rate limiter, MEV protection, 5 failover strategies, request dedup, auto-batching, Prometheus metrics.
+- [chainindex](https://github.com/DarshanKumar89/chainfoundry/tree/main/chainindex) — Reorg-safe blockchain indexer as a library (not a SaaS). Pluggable storage: SQLite, Postgres, RocksDB. Embedded in your binary. Supports all 7 architectures including Sui checkpoint-native indexing.
+- [chainerrors](https://github.com/DarshanKumar89/chainfoundry/tree/main/chainerrors) — Decodes Solidity reverts, panics, custom errors, and Solana program failures from raw bytes. Turns 0x08c379a0... into "Insufficient balance".
 
 ## Site map
 
@@ -53,7 +53,7 @@ The project is aimed at four primary audiences: AI-agent builders who need decod
 ## Contact
 
 - Email: info@ai2innovate.io
-- GitHub: https://github.com/DarshanKumar89/chainkit
+- GitHub: https://github.com/DarshanKumar89/chainfoundry
 - X/Twitter: https://x.com/darshan_aqua
 - LinkedIn (company): https://www.linkedin.com/company/ai2innovate/
 

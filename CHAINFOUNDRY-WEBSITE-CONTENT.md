@@ -308,10 +308,9 @@ Three paths:
 - **I want to learn more** → Subscribe to updates (email capture)
 
 **Footer:**
-- ChainFoundry is a product of AI2Innovate SRL
-- EU-based: Bratislava, Slovakia · Brussels, Belgium
+- ChainFoundry is a product of AI2Innovate
 - Links: GitHub · X · LinkedIn · Discord · Blog · Docs
-- MIT Licensed · © 2026 AI2Innovate SRL
+-  © 2026 AI2Innovate 
 
 ---
 

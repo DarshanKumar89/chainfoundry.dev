@@ -4,7 +4,7 @@ const stats = [
   { value: "500+", label: "networks", sub: "EVM alone covers 200+" },
   { value: "50+", label: "protocol schemas", sub: "Uniswap · Aave · Lido · …" },
   { value: "5", label: "language bindings", sub: "Rust core + TS · Py · Go · Java · WASM" },
-  { value: "MIT", label: "license", sub: "open-source core" },
+  { value: "Open", label: "core SDK", sub: "self-hosted · embeddable" },
 ];
 
 export default function Numbers() {
@@ -17,10 +17,10 @@ export default function Numbers() {
           <p className="mt-4 text-base text-ink/60 md:text-lg">
             Every figure below matches the{" "}
             <a
-              href="https://github.com/DarshanKumar89/chainkit"
+              href="https://github.com/DarshanKumar89/chainfoundry"
               className="link-underline"
             >
-              chainkit
+              chainfoundry
             </a>{" "}
             monorepo and the live crates.io · npm · PyPI entries.
           </p>
@@ -50,8 +50,7 @@ export default function Numbers() {
           ·{" "}
           <a href="https://pypi.org" className="link-underline">
             PyPI
-          </a>{" "}
-          · MIT Licensed
+          </a>
         </p>
       </div>
     </section>

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s — ChainFoundry",
   },
   description:
-    "Decode, transport, index, and correlate blockchain data across 7 architectures and 500+ networks. 4 shipped Rust crates, 5 language bindings, MIT licensed. Used by AI-agent, DeFi, compliance, and Sui/Bitcoin BTCFi teams.",
+    "Decode, transport, index, and correlate blockchain data across 7 architectures and 500+ networks. 4 shipped Rust crates, 5 language bindings. Used by AI-agent, DeFi, compliance, and Sui/Bitcoin BTCFi teams.",
   keywords: [
     "multichain blockchain data toolkit",
     "blockchain ABI decoder Rust",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Darsh Kumar", url: "https://www.linkedin.com/in/darshankumar/" }],
   creator: "Darsh Kumar",
-  publisher: "AI2Innovate SRL",
+  publisher: "AI2Innovate",
   category: "Developer Tools · Blockchain Infrastructure",
   alternates: {
     canonical: "/",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     siteName: "ChainFoundry",
     title: "ChainFoundry — The Universal Blockchain Data Toolkit",
     description:
-      "Decode, transport, index, and correlate blockchain data across 7 architectures and 500+ networks. 4 shipped Rust crates. MIT licensed.",
+      "Decode, transport, index, and correlate blockchain data across 7 architectures and 500+ networks. 4 shipped Rust crates.",
     locale: "en_US",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "ChainFoundry — universal blockchain data toolkit" }],
   },

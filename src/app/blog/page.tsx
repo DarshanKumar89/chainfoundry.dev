@@ -119,7 +119,7 @@ export default function BlogIndex() {
                 <h2 className="h-section mt-3">What we&apos;re writing next.</h2>
                 <p className="mt-4 max-w-2xl text-[15px] leading-7 text-ink/65">
                   These are drafts — not published yet. Every topic is tied to something already shipped in
-                  the <a href="https://github.com/DarshanKumar89/chainkit" className="link-underline">chainkit repo</a>, so the writing stays technical.
+                  the <a href="https://github.com/DarshanKumar89/chainfoundry" className="link-underline">chainfoundry repo</a>, so the writing stays technical.
                 </p>
               </div>
               <div className="w-full md:w-[360px]">

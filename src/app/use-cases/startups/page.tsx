@@ -58,7 +58,7 @@ npm install @chainfoundry/chaincodec @chainfoundry/chainrpc
 # - ABI decoding for 50+ protocols
 # - RPC transport with circuit breaker and failover
 # - Reorg-safe indexing with SQLite storage
-# - All for $0/month. MIT licensed.`,
+# - All for $0/month. Open-source core.`,
   },
   { type: "h2", text: "What changes for you" },
   {

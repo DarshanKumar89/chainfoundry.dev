@@ -78,8 +78,8 @@ println!("Time delta: {}s", correlation.time_delta_seconds);`,
     items: [
       "Embeddable — build cross-chain tracing into YOUR product, not rent it from someone else",
       "Open source — audit the correlation logic yourself, no black box",
-      "EU-ready — built by an EU-based team, designed for MiCA/NIS2 compliance workflows",
-      "10x cheaper — MIT-licensed core vs. $100K/year proprietary SaaS",
+      "Designed for MiCA and NIS2 compliance workflows from day one",
+      "10x cheaper — open-source core vs. $100K/year proprietary SaaS",
     ],
   },
   {

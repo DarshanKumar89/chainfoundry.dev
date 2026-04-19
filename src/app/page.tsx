@@ -12,7 +12,7 @@ import CTAFooter from "@/components/CTAFooter";
 export const metadata: Metadata = {
   title: "ChainFoundry — The Universal Blockchain Data Toolkit",
   description:
-    "Decode, transport, index, and correlate blockchain data across 7 architectures and 500+ networks. One Rust core, 6 language bindings. MIT licensed.",
+    "Decode, transport, index, and correlate blockchain data across 7 architectures and 500+ networks. One Rust core, 6 language bindings.",
   alternates: { canonical: "/" },
 };
 

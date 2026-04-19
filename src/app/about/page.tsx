@@ -45,7 +45,7 @@ export default function About() {
             <p className="text-[17px] leading-8 text-ink/80">
               Our bet is simple: the next decade of on-chain software gets built by teams who don&apos;t have time to
               reinvent RPC middleware. Give them a decode layer, a transport layer, an indexer, and a correlator
-              — four crates, one API, MIT-licensed — and the work starts to compound across an entire industry
+              — four crates, one API, open-source — and the work starts to compound across an entire industry
               instead of disappearing into repo after private repo.
             </p>
           </article>
@@ -76,7 +76,7 @@ export default function About() {
             <p className="text-[17px] leading-8 text-ink/80">
               So he started writing one. In Rust, because performance and memory safety aren&apos;t optional when
               you&apos;re decoding a million events a second. With bindings in TypeScript, Python, Go, Java, and WASM,
-              because no real team lives in a single language. Open-source under MIT, because the mistake of the
+              because no real team lives in a single language. Open-source, because the mistake of the
               last decade was locking this layer behind contracts. And with a specific bias toward EU builders —
               regulated exchanges, law firms, RegTech startups, public-sector teams — who have been underserved
               by a US-centric tooling market.
@@ -95,7 +95,7 @@ export default function About() {
                 {
                   title: "Open by default",
                   body:
-                    "MIT-licensed core. No enterprise-only features baked into the primitives. If you can&apos;t audit it, you can&apos;t trust it.",
+                    "Open-source core. No enterprise-only features baked into the primitives. If you can&apos;t audit it, you can&apos;t trust it.",
                 },
                 {
                   title: "Embeddable, not hosted",

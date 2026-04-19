@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://chainfoundry.dev"><img alt="Website" src="https://img.shields.io/badge/website-chainfoundry.dev-0F1B2D?style=flat-square&labelColor=0F1B2D&color=1D9E75"/></a>
-  <a href="https://github.com/DarshanKumar89/chainkit"><img alt="SDK" src="https://img.shields.io/badge/SDK-DarshanKumar89%2Fchainkit-0F1B2D?style=flat-square&logo=github&labelColor=0F1B2D&color=1D9E75"/></a>
+  <a href="https://github.com/DarshanKumar89/chainfoundry"><img alt="SDK" src="https://img.shields.io/badge/SDK-DarshanKumar89%2Fchainkit-0F1B2D?style=flat-square&logo=github&labelColor=0F1B2D&color=1D9E75"/></a>
   <a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-0F1B2D?style=flat-square&labelColor=0F1B2D&color=1D9E75"/></a>
   <a href="https://crates.io/crates/chaincodec-core"><img alt="crates.io" src="https://img.shields.io/crates/v/chaincodec-core?style=flat-square&labelColor=0F1B2D&color=1D9E75&label=chaincodec"/></a>
   <a href="https://www.npmjs.com/package/@chainfoundry/chaincodec"><img alt="npm" src="https://img.shields.io/npm/v/@chainfoundry/chaincodec?style=flat-square&labelColor=0F1B2D&color=1D9E75"/></a>
@@ -45,10 +45,10 @@ ChainFoundry replaces that wall with **one coherent API** that works across ever
 
 | Crate | Status | Purpose |
 |---|---|---|
-| [`chaincodec`](https://github.com/DarshanKumar89/chainkit/tree/main/chaincodec) | `v0.1.2` · crates.io · npm · PyPI | Universal ABI decoder — EVM + Solana + Cosmos, 50+ bundled protocol schemas, CSDL portable schema format |
-| [`chainrpc`](https://github.com/DarshanKumar89/chainkit/tree/main/chainrpc) | `v0.1.1` · crates.io · npm · PyPI | Production RPC transport — circuit breaker, 4-tier cache, CU-aware rate limiter, MEV protection, 5 failover strategies |
-| [`chainindex`](https://github.com/DarshanKumar89/chainkit/tree/main/chainindex) | `v0.1.1` · crates.io · npm · PyPI | Reorg-safe blockchain indexer as a library (not a SaaS). SQLite / Postgres / RocksDB |
-| [`chainerrors`](https://github.com/DarshanKumar89/chainkit/tree/main/chainerrors) | `v0.1.0` · crates.io · npm · PyPI | Decodes Solidity reverts, panics, custom errors, and Solana program failures |
+| [`chaincodec`](https://github.com/DarshanKumar89/chainfoundry/tree/main/chaincodec) | `v0.1.2` · crates.io · npm · PyPI | Universal ABI decoder — EVM + Solana + Cosmos, 50+ bundled protocol schemas, CSDL portable schema format |
+| [`chainrpc`](https://github.com/DarshanKumar89/chainfoundry/tree/main/chainrpc) | `v0.1.1` · crates.io · npm · PyPI | Production RPC transport — circuit breaker, 4-tier cache, CU-aware rate limiter, MEV protection, 5 failover strategies |
+| [`chainindex`](https://github.com/DarshanKumar89/chainfoundry/tree/main/chainindex) | `v0.1.1` · crates.io · npm · PyPI | Reorg-safe blockchain indexer as a library (not a SaaS). SQLite / Postgres / RocksDB |
+| [`chainerrors`](https://github.com/DarshanKumar89/chainfoundry/tree/main/chainerrors) | `v0.1.0` · crates.io · npm · PyPI | Decodes Solidity reverts, panics, custom errors, and Solana program failures |
 | `chaincorrelate` | Planned · v2 roadmap | Cross-chain event correlation — bridge deposit/withdrawal matching |
 
 ## Chain coverage
@@ -80,7 +80,7 @@ All four crates ship with native bindings:
 
 ## About this repository
 
-This repo is the **marketing website** at [chainfoundry.dev](https://chainfoundry.dev). The SDK source — all four Rust crates, bindings, examples, and technical docs — lives in a separate repo: [**DarshanKumar89/chainkit**](https://github.com/DarshanKumar89/chainkit).
+This repo is the **marketing website** at [chainfoundry.dev](https://chainfoundry.dev). The SDK source — all four Rust crates, bindings, examples, and technical docs — lives in a separate repo: [**DarshanKumar89/chainfoundry**](https://github.com/DarshanKumar89/chainfoundry).
 
 ### Site stack
 
@@ -137,7 +137,7 @@ ChainFoundry is actively fundraising and open to ecosystem-grant partnerships wi
 ## Links
 
 - 🌐 Website — <https://chainfoundry.dev>
-- 📦 SDK repo — <https://github.com/DarshanKumar89/chainkit>
+- 📦 SDK repo — <https://github.com/DarshanKumar89/chainfoundry>
 - 📘 Blog — <https://chainfoundry.dev/blog/>
 - 🧠 MCP for AI agents — <https://chainfoundry.dev/mcp/>
 - 🗞️ Press & brand kit — <https://chainfoundry.dev/press/>
@@ -149,11 +149,9 @@ ChainFoundry is actively fundraising and open to ecosystem-grant partnerships wi
 
 ## Credibility
 
-Built by **Darsh Kumar** — Apache Committer, 25+ years of senior engineering across Rust, Java, Python, cybersecurity, and database systems. Previously led cybersecurity architecture for EU institutions. Operating entity: **AI2Innovate SRL** (Brussels, Belgium).
+Built by **Darsh Kumar** — Apache Committer, 25+ years of senior engineering across Rust, Java, Python, cybersecurity, and database systems. Previously led cybersecurity architecture for EU institutions. Operating entity: **AI2Innovate **.
 
-## License
 
-[MIT](./LICENSE) — the SDK core is open-source forever. Enterprise cloud and managed services planned for teams that need hosted infrastructure, but nothing is gated behind a paywall in the open-source core.
 
 ---
 

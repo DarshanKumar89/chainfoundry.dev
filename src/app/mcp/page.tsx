@@ -158,7 +158,7 @@ export default function Page() {
                 <Feature icon={<Bot className="h-4 w-4" />} label="Any MCP client" />
                 <Feature icon={<Cpu className="h-4 w-4" />} label="Rust + Python" />
                 <Feature icon={<Network className="h-4 w-4" />} label="7 architectures" />
-                <Feature icon={<Sparkles className="h-4 w-4" />} label="MIT licensed" />
+                <Feature icon={<Sparkles className="h-4 w-4" />} label="Open-source" />
               </div>
             </div>
             <div>

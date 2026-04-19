@@ -87,13 +87,13 @@ export default function Contact() {
               <Contactile
                 icon={<MessageCircle className="h-4 w-4" />}
                 label="Discord"
-                value="darshankumar89"
+                value="ChainFoundry"
                 href="#"
               />
               <Contactile
                 icon={<GithubIcon />}
                 label="GitHub"
-                value="DarshanKumar89/chainkit"
+                value="ChainFoundry"
                 href={GITHUB_URL}
               />
               <Contactile
