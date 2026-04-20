@@ -30,12 +30,18 @@ export default function UseCasesHub() {
 
       <section className="border-b border-ink/10 bg-white pb-12">
         <div className="container-prose">
-          <div className="reveal grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 md:grid-cols-4">
+          <div className="reveal grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 sm:grid-cols-2 md:grid-cols-4">
             {outcomes.map((o) => (
-              <div key={o.label} className="bg-white p-5 md:p-6">
-                <div className="font-serif text-3xl text-ink md:text-4xl">{o.value}</div>
-                <div className="mt-1 text-xs uppercase tracking-[0.14em] text-ink/50">{o.label}</div>
-                <div className="mt-2 text-[13px] leading-5 text-ink/60">{o.body}</div>
+              <div key={o.label} className="flex min-h-[200px] flex-col bg-white p-6 md:p-7">
+                <div className="font-serif text-4xl leading-[1] text-ink md:text-5xl">
+                  {o.value}
+                </div>
+                <div className="mt-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink/55">
+                  {o.label}
+                </div>
+                <p className="mt-auto pt-3 text-[13px] leading-[1.55] text-ink/65 md:text-[14px] md:leading-[1.6]">
+                  {o.body}
+                </p>
               </div>
             ))}
           </div>

@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
-// Runs on Vercel / Netlify / Cloudflare Pages Edge.
-// Will not exist in a purely static export (GH Pages) — the form falls back to mailto.
-export const runtime = "edge";
+// Node runtime required — nodemailer uses `net` / `tls` (not available on Edge).
+export const runtime = "nodejs";
+// Never cache; always freshly send.
+export const dynamic = "force-dynamic";
 
-const SENDGRID_ENDPOINT = "https://api.sendgrid.com/v3/mail/send";
-const INBOX = "info@ai2innovate.io";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 type Body = { email?: string; source?: string; hp?: string };
@@ -18,7 +18,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "invalid_body" }, { status: 400 });
   }
 
-  // Basic bot trap — a hidden "hp" field. Real users never fill it.
+  // Hidden honeypot — real users never fill it.
   if (body.hp && body.hp.length > 0) {
     return NextResponse.json({ ok: true }, { status: 200 });
   }
@@ -28,10 +28,21 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "invalid_email" }, { status: 400 });
   }
 
-  const apiKey = process.env.SENDGRID_API_KEY;
-  if (!apiKey) {
+  const {
+    SMTP_HOST,
+    SMTP_PORT,
+    SMTP_USER,
+    SMTP_PASS,
+    MAIL_TO,
+    MAIL_FROM,
+  } = process.env;
+
+  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS || !MAIL_TO || !MAIL_FROM) {
     return NextResponse.json(
-      { error: "not_configured", hint: "Set SENDGRID_API_KEY in your deploy environment." },
+      {
+        error: "not_configured",
+        hint: "Set SMTP_HOST / SMTP_PORT / SMTP_USER / SMTP_PASS / MAIL_TO / MAIL_FROM in the deploy environment.",
+      },
       { status: 503 }
     );
   }
@@ -44,42 +55,49 @@ export async function POST(req: Request) {
     req.headers.get("x-real-ip") ??
     "";
 
-  const payload = {
-    personalizations: [
-      {
-        to: [{ email: INBOX }],
-        subject: `[ChainFoundry] New subscriber: ${email}`,
-      },
-    ],
-    from: { email: INBOX, name: "ChainFoundry Newsletter" },
-    reply_to: { email },
-    content: [
-      {
-        type: "text/plain",
-        value:
-          `New subscriber from ${source}\n\n` +
-          `Email:       ${email}\n` +
-          `Timestamp:   ${ts}\n` +
-          `User-Agent:  ${ua}\n` +
-          `IP:          ${ip}\n`,
-      },
-    ],
-    categories: ["chainfoundry-newsletter"],
-  };
-
-  const r = await fetch(SENDGRID_ENDPOINT, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(payload),
+  const port = Number(SMTP_PORT ?? 587);
+  const transporter = nodemailer.createTransport({
+    host: SMTP_HOST,
+    port,
+    // Office 365 on 587 uses STARTTLS (secure=false), not implicit TLS.
+    secure: port === 465,
+    auth: { user: SMTP_USER, pass: SMTP_PASS },
+    requireTLS: port === 587,
   });
 
-  if (!r.ok) {
-    const detail = (await r.text().catch(() => "")).slice(0, 240);
+  const subject = `[ChainFoundry] New subscriber: ${email}`;
+  const text =
+    `New subscriber from ${source}\n\n` +
+    `Email:       ${email}\n` +
+    `Timestamp:   ${ts}\n` +
+    `User-Agent:  ${ua}\n` +
+    `IP:          ${ip}\n`;
+
+  const html = `
+    <div style="font-family:ui-sans-serif,system-ui,Segoe UI,sans-serif;color:#0F1B2D">
+      <h2 style="margin:0 0 12px;font-weight:600">New ChainFoundry subscriber</h2>
+      <table cellpadding="6" style="border-collapse:collapse;font-size:14px">
+        <tr><td style="color:#5A6578">Email</td><td><a href="mailto:${email}">${email}</a></td></tr>
+        <tr><td style="color:#5A6578">Source</td><td>${source}</td></tr>
+        <tr><td style="color:#5A6578">Timestamp</td><td>${ts}</td></tr>
+        <tr><td style="color:#5A6578">User-Agent</td><td style="font-family:ui-monospace,monospace;font-size:12px">${ua}</td></tr>
+        <tr><td style="color:#5A6578">IP</td><td style="font-family:ui-monospace,monospace;font-size:12px">${ip}</td></tr>
+      </table>
+    </div>`;
+
+  try {
+    await transporter.sendMail({
+      from: MAIL_FROM,
+      to: MAIL_TO,
+      replyTo: email,
+      subject,
+      text,
+      html,
+    });
+  } catch (err) {
+    const detail = err instanceof Error ? err.message.slice(0, 240) : "unknown";
     return NextResponse.json(
-      { error: "send_failed", status: r.status, detail },
+      { error: "send_failed", detail },
       { status: 502 }
     );
   }

@@ -10,7 +10,7 @@ export default function CTAFooter() {
           <p className="eyebrow">Get started</p>
           <h2 className="h-section mt-3">Ready to build?</h2>
           <p className="mt-5 text-lg text-ink/70 md:text-xl">
-            Open-source core. EU-built. Production-grade middleware. Add any chain in hours, not weeks.
+            Open-source core. Production-grade middleware. Add any chain in hours, not weeks.
           </p>
         </div>
 

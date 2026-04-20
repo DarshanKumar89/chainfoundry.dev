@@ -3,7 +3,7 @@
 <p align="center">
   <strong>The universal blockchain data toolkit.</strong><br/>
   One API for <strong>7 blockchain architectures</strong> and <strong>500+ networks</strong>.<br/>
-  Four shipped Rust crates with polyglot bindings. MIT-licensed. EU-built.
+  Four shipped Rust crates with polyglot bindings. Open-source core.
 </p>
 
 <p align="center">

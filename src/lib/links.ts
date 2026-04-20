@@ -3,4 +3,5 @@ export const DOCS_URL = "https://github.com/DarshanKumar89/chainfoundry";
 export const GITHUB_URL = "https://github.com/DarshanKumar89/chainfoundry";
 export const X_URL = "https://x.com/darshan_aqua";
 export const LINKEDIN_URL = "https://www.linkedin.com/company/ai2innovate/";
+export const DISCORD_URL = "https://discord.gg/mad7PMnbZP";
 export const EMAIL = "info@ai2innovate.io";

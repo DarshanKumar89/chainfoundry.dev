@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { LogoMark } from "./Logo";
 import { DiscordIcon, GithubIcon, LinkedinIcon, XIcon } from "./SocialIcons";
-import { DOCS_URL } from "@/lib/links";
+import { DISCORD_URL, DOCS_URL } from "@/lib/links";
 
 const product = [
   { href: "/use-cases", label: "Use cases" },
@@ -48,7 +48,7 @@ export default function SiteFooter() {
               <SocialLink href="https://www.linkedin.com/company/ai2innovate/" label="LinkedIn">
                 <LinkedinIcon />
               </SocialLink>
-              <SocialLink href="#" label="Discord: darshankumar89">
+              <SocialLink href={DISCORD_URL} label="Join ChainFoundry on Discord">
                 <DiscordIcon />
               </SocialLink>
             </div>

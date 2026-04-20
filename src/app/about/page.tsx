@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import CTAFooter from "@/components/CTAFooter";
 import PageHero from "@/components/PageHero";
+import Architectures from "@/components/home/Architectures";
+import Primitives from "@/components/home/Primitives";
 
 export const metadata: Metadata = {
   title: "About ChainFoundry",
@@ -87,44 +89,11 @@ export default function About() {
             </p>
           </article>
 
-          <article className="space-y-6">
-            <p className="eyebrow">The principles</p>
-            <h2 className="h-section">What we refuse to compromise on</h2>
-            <ul className="grid gap-4 md:grid-cols-2">
-              {[
-                {
-                  title: "Open by default",
-                  body:
-                    "Open-source core. No enterprise-only features baked into the primitives. If you can&apos;t audit it, you can&apos;t trust it.",
-                },
-                {
-                  title: "Embeddable, not hosted",
-                  body:
-                    "ChainFoundry is a library in your binary. You own your data, your infra, your uptime. SaaS is optional, never required.",
-                },
-                {
-                  title: "Polyglot from day one",
-                  body:
-                    "Rust core, bindings everywhere. Your backend team and your frontend team get the same API, not a dialect war.",
-                },
-                {
-                  title: "EU-built, globally useful",
-                  body:
-                    "Designed with MiCA, NIS2, and GDPR workflows in mind — but nothing in here is region-locked.",
-                },
-              ].map((p) => (
-                <li
-                  key={p.title}
-                  className="rounded-2xl border border-ink/10 bg-white p-5"
-                  dangerouslySetInnerHTML={{
-                    __html: `<div class="font-medium text-ink">${p.title}</div><div class="mt-2 text-[15px] leading-7 text-ink/70">${p.body}</div>`,
-                  }}
-                />
-              ))}
-            </ul>
-          </article>
         </div>
       </section>
+
+      <Primitives />
+      <Architectures />
 
       <CTAFooter />
     </>

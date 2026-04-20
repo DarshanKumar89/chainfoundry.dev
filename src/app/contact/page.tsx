@@ -4,7 +4,7 @@ import { ArrowRight, Calendar, Mail, MessageCircle } from "lucide-react";
 import NewsletterForm from "@/components/NewsletterForm";
 import PageHero from "@/components/PageHero";
 import { GithubIcon, LinkedinIcon, XIcon } from "@/components/SocialIcons";
-import { DOCS_URL, GITHUB_URL } from "@/lib/links";
+import { DISCORD_URL, DOCS_URL, GITHUB_URL } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "Contact — Book a Call or Get in Touch",
@@ -87,8 +87,8 @@ export default function Contact() {
               <Contactile
                 icon={<MessageCircle className="h-4 w-4" />}
                 label="Discord"
-                value="ChainFoundry"
-                href="#"
+                value="Join the community"
+                href={DISCORD_URL}
               />
               <Contactile
                 icon={<GithubIcon />}

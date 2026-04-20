@@ -114,22 +114,22 @@ export default function Page() {
 
       <section className="border-b border-ink/10 bg-white">
         <div className="container-prose pb-10">
-          <div className="flex flex-col items-start gap-4 rounded-2xl border border-accent/30 bg-accent/5 p-5 md:flex-row md:items-center md:justify-between md:p-6">
-            <div className="flex items-start gap-3">
-              <span className="mt-0.5 flex h-8 w-8 flex-none items-center justify-center rounded-lg bg-accent/15 text-accent">
+          <div className="flex flex-col gap-5 rounded-2xl border border-accent/30 bg-accent/5 p-6 md:flex-row md:items-center md:justify-between md:gap-8 md:p-7">
+            <div className="flex flex-1 items-start gap-4">
+              <span className="mt-0.5 flex h-9 w-9 flex-none items-center justify-center rounded-lg bg-accent/15 text-accent">
                 <Sparkles className="h-4 w-4" />
               </span>
-              <div>
-                <div className="text-sm font-medium text-ink">
+              <div className="min-w-0">
+                <div className="text-[15px] font-medium leading-snug text-ink">
                   Coming soon — the MCP server is actively in development.
                 </div>
-                <div className="mt-1 text-[13px] text-ink/65">
-                  The underlying primitives (chaincodec, chainrpc, chainindex) already ship across 7
-                  architectures. The MCP wrapper is next. Join the waitlist to get early access.
-                </div>
+                <p className="mt-1.5 text-[13px] leading-6 text-ink/65">
+                  The underlying primitives (chaincodec, chainrpc, chainindex) already ship across
+                  7 architectures. The MCP wrapper is next. Join the waitlist for early access.
+                </p>
               </div>
             </div>
-            <Link href="/contact#newsletter" className="btn-primary shrink-0 text-sm">
+            <Link href="/contact#newsletter" className="btn-primary shrink-0 self-stretch text-sm md:self-center">
               Get early access <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
