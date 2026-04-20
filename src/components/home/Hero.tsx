@@ -17,14 +17,6 @@ let indexer = Indexer::sqlite("./data.db")
 // Same stack for Solana, Cosmos, Sui, Bitcoin, and 200+ more
 indexer.run().await?;`;
 
-const modules: { name: string; role: string; shipped: boolean }[] = [
-  { name: "chaincodec", role: "Decode", shipped: true },
-  { name: "chainrpc", role: "Transport", shipped: true },
-  { name: "chainindex", role: "Index", shipped: true },
-  { name: "chainerrors", role: "Diagnose", shipped: true },
-  { name: "chaincorrelate", role: "Correlate · v2", shipped: false },
-];
-
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
@@ -43,36 +35,8 @@ export default function Hero() {
               Build <em className="italic text-accent">everywhere.</em>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-ink/70 md:text-xl md:leading-relaxed">
-              Four composable crates. One API for 7 architectures and 500+ networks.
+              One API for 7 blockchain architectures and 500+ networks.
             </p>
-            <p className="mt-4 max-w-xl text-[15px] text-ink/60 md:text-base md:leading-relaxed">
-              <span className="font-mono text-ink">chaincodec</span> decodes events.{" "}
-              <span className="font-mono text-ink">chainrpc</span> handles transport.{" "}
-              <span className="font-mono text-ink">chainindex</span> stores history.{" "}
-              <span className="font-mono text-ink">chainerrors</span> translates reverts. Works on Ethereum,
-              Solana, Cosmos, Polkadot, Bitcoin, Aptos, and Sui.
-            </p>
-
-            <div className="mt-8 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
-              {modules.map((m) => (
-                <span
-                  key={m.name}
-                  className={`inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-[13px] ${
-                    m.shipped
-                      ? "border-ink/10 bg-white text-ink"
-                      : "border-dashed border-ink/15 bg-mist-50 text-ink/60"
-                  }`}
-                >
-                  <span
-                    className={`h-1.5 w-1.5 rounded-full ${
-                      m.shipped ? "bg-accent" : "bg-ink/30"
-                    }`}
-                  />
-                  <span className="font-mono">{m.name}</span>
-                  <span className="text-ink/45">· {m.role}</span>
-                </span>
-              ))}
-            </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a href={DOCS_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
@@ -94,7 +58,7 @@ export default function Hero() {
             </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-2">
-              <span className="chip">cargo add chaincodec chainrpc chainindex</span>
+              <span className="chip">cargo add chaincodec</span>
               <span className="chip">npm i @chainfoundry/chaincodec</span>
               <span className="chip">pip install chaincodec</span>
             </div>
