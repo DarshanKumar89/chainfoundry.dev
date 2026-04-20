@@ -15,14 +15,14 @@ export default function Numbers() {
           <p className="eyebrow">The numbers — verifiable</p>
           <h2 className="h-section mt-3">What&apos;s actually published.</h2>
           <p className="mt-4 text-base text-ink/60 md:text-lg">
-            Every figure below matches the{" "}
+            Every figure verifiable in the{" "}
             <a
               href="https://github.com/DarshanKumar89/chainfoundry"
               className="link-underline"
             >
-              chainfoundry
-            </a>{" "}
-            monorepo and the live crates.io · npm · PyPI entries.
+              chainfoundry repo
+            </a>
+            .
           </p>
         </div>
 

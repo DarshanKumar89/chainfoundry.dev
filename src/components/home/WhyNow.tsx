@@ -12,7 +12,7 @@ const signals = [
   {
     stat: "$21B+",
     label: "laundered across bridges",
-    body: "MiCA and NIS2 are live. Forensics is a billion-dollar market ruled by closed-source SaaS. Open-source correlation doesn't exist yet.",
+    body: "Crypto regulation is live globally. Forensics is a billion-dollar market — all closed-source SaaS. An open alternative doesn't exist yet.",
   },
   {
     stat: "Months",
@@ -40,8 +40,7 @@ export default function WhyNow() {
             <span className="italic text-accent">The tooling hasn&apos;t caught up.</span>
           </h2>
           <p className="mt-6 text-lg text-white/70 md:text-xl md:leading-relaxed">
-            Four market forces are converging right now. The first team to ship the missing
-            standard library wins the decade.
+            Four forces are converging. The first team to ship the missing standard library wins the decade.
           </p>
         </div>
 

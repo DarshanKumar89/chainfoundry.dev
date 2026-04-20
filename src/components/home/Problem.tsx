@@ -14,17 +14,13 @@ export default function Problem() {
   return (
     <section className="border-y border-ink/10 bg-mist-50 py-20 md:py-28">
       <div className="container-prose">
-        <div className="reveal grid items-end gap-10 md:grid-cols-[1fr_1.2fr]">
-          <div>
-            <p className="eyebrow">The problem</p>
-            <h2 className="h-section mt-3">7 languages. Zero translators.</h2>
-          </div>
-          <div className="text-ink/70">
-            <p className="text-lg leading-relaxed md:text-xl md:leading-relaxed">
-              Blockchains don&apos;t agree on anything. Each architecture speaks its own binary dialect — and until
-              today, you had to learn every one from scratch.
-            </p>
-          </div>
+        <div className="reveal mx-auto max-w-3xl text-center">
+          <p className="eyebrow">The problem</p>
+          <h2 className="h-section mt-3">7 languages. Zero translators.</h2>
+          <p className="mt-5 text-lg leading-relaxed text-ink/70 md:text-xl md:leading-relaxed">
+            Every blockchain speaks its own dialect. Going multichain has meant learning every one from
+            scratch.
+          </p>
         </div>
 
         <div className="reveal mt-14">
@@ -69,17 +65,9 @@ export default function Problem() {
           </div>
         </div>
 
-        <div className="reveal mt-12 max-w-3xl text-ink/70">
-          <p className="text-base leading-7 md:text-lg md:leading-8">
-            Ethereum uses ABI encoding. Solana uses Borsh. Cosmos uses Protobuf. Substrate uses SCALE. Bitcoin uses
-            Script. Aptos and Sui use Move — but in incompatible ways. Today, building anything multichain means
-            learning each system from scratch, maintaining separate codebases, and hoping nothing breaks when one
-            chain upgrades.
-          </p>
-          <p className="mt-4 text-base leading-7 text-ink md:text-lg md:leading-8">
-            ChainFoundry fixes this. One toolkit. Every architecture. Every language you already use.
-          </p>
-        </div>
+        <p className="reveal mx-auto mt-12 max-w-2xl text-center text-lg leading-relaxed text-ink md:text-xl md:leading-relaxed">
+          ChainFoundry is the translator. One toolkit, every architecture, every language you already use.
+        </p>
       </div>
     </section>
   );
